@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+    <link rel="stylesheet"  href="style.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <img data-toggle="modal" data-target="#exampleModal" src="danskebank.PNG" id="pic" />  
+  <div class="modal fade " id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"
+  style="width: 1200px;height: 900px;margin-left:auto;margin-right:auto;">
+    <div class="modal-dialog" role="document"></div>
+      <div class="modal-content" style="background-color: rgba(0,0,0,.0001) !important;">
+        <div class="modal-body"  >
+            <!-- <video width="800" autoplay>
+               <source src="hacked.mp4" type="video/mp4"> 
+                Your browser does not support HTML5 video.
+              </video> -->     
+              <iframe style="min-width: 1200px;min-height: 900px;" id="video" 
+              src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("pic").onclick = function(){
+     
+      document.getElementById("video").setAttribute("src","https://www.youtube.com/embed/0vxCFIGCqnI?ecver=1&autoplay=1");
+    }
+    
+  </script>
+</body>
+
+</html>
