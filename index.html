@@ -18,17 +18,31 @@
 </head>
 
 <body>
-  <img data-toggle="modal" data-target="#exampleModal" src="danskebank.PNG" id="pic" />  
-  <div class="modal fade " id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"
+  <!-- <p style="font-size: 250px;position:absolute">You have been hacked</p> -->
+  <iframe width="1920" height="1200" style="position:absolute;" id="video" 
+              src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  <img data-toggle="modal" data-target="#exampleModal" src="danskebank.PNG" id="pic"
+    style="position:absolute;float:right" />  
+  <div class="modal fade " id="exampleModal" tabindex="-1" role="dialog"
+  aria-labelledby="exampleModalLabel" aria-hidden="true"
+  style="width: 99%;margin-left: 0px;">
+    <div class="modal-dialog" role="document"></div>
+      <div class="modal-content" style="background-color: rgba(0,0,0,.0001) !important;">
+        <div class="modal-body"  >           
+            <img id="piclogin" style="position:absolute;z-index:1;left:0" src="login.PNG">
+        </div>
+        <!-- <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div> -->
+      </div>
+    </div>
+  </div>
+  <!-- <div class="modal fade " id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"
   style="width: 1200px;height: 900px;margin-left:auto;margin-right:auto;">
     <div class="modal-dialog" role="document"></div>
       <div class="modal-content" style="background-color: rgba(0,0,0,.0001) !important;">
         <div class="modal-body"  >
-            <!-- <video width="800" autoplay>
-               <source src="hacked.mp4" type="video/mp4"> 
-                Your browser does not support HTML5 video.
-              </video> -->     
-              <iframe style="min-width: 1200px;min-height: 900px;" id="video" 
+             <iframe style="min-width: 1200px;min-height: 900px;" id="video" 
               src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
         <div class="modal-footer">
@@ -36,15 +50,42 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <script>
     document.getElementById("pic").onclick = function(){
-     
-      document.getElementById("video").setAttribute("src","https://www.youtube.com/embed/0vxCFIGCqnI?ecver=1&autoplay=1");
+     // document.getElementById("video").setAttribute("src","https://www.youtube.com/embed/0vxCFIGCqnI?ecver=1&autoplay=1");
+    }
+    document.getElementById("piclogin").onclick = function(){
+      document.getElementById("video").setAttribute("src",
+      "https://www.youtube.com/embed/0vxCFIGCqnI?ecver=1&autoplay=1&start=17");
+      //document.getElementById("video").setAttribute("src","https://www.youtube.com/embed/dW33-LmMQnw?autoplay=1");
+      // <iframe width="1920" height="1200" src="https://www.youtube.com/embed/dW33-LmMQnw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      
+      var w = 100;
+      var w2 = 100;
+      var pic = document.getElementById("piclogin"); 
+      var pic2 = document.getElementById("pic");
+      const i1 = setInterval(()=>{
+        w=w-0.25;
+        if(w < 0){
+          clearInterval(i1);    
+        }
+        pic.style.width = w +"%";
+      },25)
+      const i2 = setInterval(()=>{
+        w2=w2-0.25;
+        if(w2===0){
+          clearInterval(i2);
+          document.getElementById("exampleModal").style.display="none";
+        }
+        pic2.style.width = w2 +"%";
+      },30)
     }
     
   </script>
 </body>
 
 </html>
+
+https://youtu.be/0vxCFIGCqnI?t=19
